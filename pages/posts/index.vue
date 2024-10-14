@@ -1,7 +1,7 @@
 <template>
   <div>
     <h2>Blog Posts</h2>
-    <div v-for="post in posts" :key="post.slug">
+    <div class="postCard" v-for="post in posts" :key="post.slug">
       <nuxt-link :to="`/posts/${post.slug}`">
         <h3>{{ post.title }}</h3>
       </nuxt-link>
@@ -21,14 +21,21 @@ export default {
 
 <style scoped>
 h2 {
-  color: #007bff;
+  color: #4d4d4d;
 }
 
 h3 {
-  color: #333;
+  color: #4d4d4d;
 }
 
 p {
   font-size: 1em;
+}
+
+.postCard {
+  margin: 15px;
+  padding: 10px;
+  border: 1.5px solid #a09f9f;
+  border-radius: 10px;
 }
 </style>

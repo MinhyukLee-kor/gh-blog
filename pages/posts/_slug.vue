@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nuxt-link to="/">홈으로 돌아가기</nuxt-link>
+    <nuxt-link to="/posts">목록으로 돌아가기</nuxt-link>
     <article>
       <h1>{{ post.title }}</h1>
       <nuxt-content :document="post" />

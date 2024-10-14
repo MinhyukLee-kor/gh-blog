@@ -1,13 +1,12 @@
 <template>
   <div>
-    <h2>Welcome to My Nuxt Blog</h2>
-    <p>This is the home page of the blog. You can find various articles and interesting content here.</p>
+    <h2>Home</h2>
   </div>
 </template>
 
 <style scoped>
 h2 {
-  color: #007bff;
+  color: #4d4d4d;
 }
 
 p {
