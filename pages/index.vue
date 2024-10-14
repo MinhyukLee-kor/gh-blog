@@ -1,20 +1,16 @@
 <template>
   <div>
-    <h1>블로그 목록</h1>
-    <div v-for="post in posts" :key="post.slug">
-      <nuxt-link :to="`/posts/${post.slug}`">
-        <h2>{{ post.title }}</h2>
-      </nuxt-link>
-      <p>{{ post.description }}</p>
-    </div>
+    <h2>Welcome to My Nuxt Blog</h2>
+    <p>This is the home page of the blog. You can find various articles and interesting content here.</p>
   </div>
 </template>
 
-<script>
-export default {
-  async asyncData({$content}) {
-    const posts = await $content('posts').fetch();
-    return {posts};
-  }
+<style scoped>
+h2 {
+  color: #007bff;
 }
-</script>
+
+p {
+  font-size: 1.2em;
+}
+</style>
