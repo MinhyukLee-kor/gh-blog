@@ -8,7 +8,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "homepage": "https://MinhyukLee-kor.github.io/gh-blog",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist -r"
   },
   "dependencies": {
     "@nuxt/content": "^1.0.0",
