@@ -1,7 +1,7 @@
 ---
-title: "두 번째 블로그 게시글"
+title: "2"
 date: "2023-10-14"
-description: "Nuxt.js를 사용하여 정적 블로그를 시작합니다."
+description: "2번 게시글"
 tags: ["Nuxt.js", "블로그"]
 ---
 

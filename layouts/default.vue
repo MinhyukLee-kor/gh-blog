@@ -12,7 +12,7 @@
         <nav>
           <!-- 사용자 정보 섹션 -->
           <div class="user-info">
-            <img src="/favicon.ico" alt="Profile Image" class="profile-image" />
+            <img src="/gh-blog/favicon.ico" alt="Profile Image" class="profile-image" />
             <div class="user-name">미녁꾸</div>
             <div>3년차 웹 개발자</div>
           </div>
@@ -188,6 +188,11 @@ a {
   font-size: 1.2em;
   font-weight: bold;
   color: var(--text-100);
+}
+
+::selection {
+  background-color: #FFD700; /* 노란색 배경 */
+  color: white; /* 빨간색 글자 */
 }
 </style>
 
