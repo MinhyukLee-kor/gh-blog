@@ -2,8 +2,11 @@ export default {
   // GitHub Pages에서 정적 사이트로 빌드하는 경우, 타겟을 static으로 설정합니다.
   target: 'static',
   modules: [
-    '@nuxt/content'
+    '@nuxt/content',
+    "@nuxtjs/tailwindcss",
+    "@nuxt/image"
   ],
+  css: ["@/assets/css/main.css"],
   // Router 설정: 서브 디렉토리로 배포될 때 올바른 기본 경로를 설정합니다.
   router: {
     base: '/gh-blog/' // 리포지토리 이름을 기준으로 정확하게 설정
