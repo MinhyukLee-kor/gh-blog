@@ -6,8 +6,8 @@
       </div>
       <div class="md:w-2/3 px-8">
         <AuthorIntro></AuthorIntro>
-<!--        <Expertise></Expertise>-->
-<!--        <TimeLine></TimeLine>-->
+        <Expertise></Expertise>
+        <TimeLine></TimeLine>
       </div>
     </div>
   </div>
@@ -31,6 +31,8 @@
 // });
 import AuthorCard from "@/components/AuthorCard.vue";
 import AuthorIntro from "@/components/AuthorIntro.vue";
+import Expertise from "@/components/Expertise.vue";
+import TimeLine from "@/components/TimeLine.vue";
 </script>
 
 <style></style>

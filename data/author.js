@@ -2,14 +2,6 @@
 import NodeIcon from "assets/devicon/node.svg?component";
 import LaravelIcon from "assets/devicon/laravel.svg?component";
 // Frontend Expertise
-import VueIcon from "assets/devicon/vuejs.svg?component";
-import NuxtIcon from "assets/devicon/nuxt.svg?component";
-import BootstrapIcon from "assets/devicon/bootstrap.svg?component";
-import JavascriptIcon from "assets/devicon/javascript.svg?component";
-import TailwindCssIcon from "assets/devicon/tailwindcss.svg?component";
-// Timeline
-import Home from "assets/icons/home.svg?component";
-import Academy from "assets/icons/academy.svg?component";
 
 const author = {
     author_image: "/author.png",
@@ -26,72 +18,32 @@ const author = {
         facebook: "#",
         github: "#",
     },
-    expertises: {
-        "Frontend": [
-            {
-                name: "Bootstrap",
-                icon: BootstrapIcon,
-                description: "",
-            },
-            {
-                name: "Tailwind",
-                icon: TailwindCssIcon,
-                description: "",
-            },
-            {
-                name: "Javascript",
-                icon: JavascriptIcon,
-                description: "",
-            },
-            {
-                name: "VueJS",
-                icon: VueIcon,
-                description: "",
-            },
-            {
-                name: "Nuxt 3",
-                icon: NuxtIcon,
-                description: "",
-            }
-        ],
-        "Backend": [
-            {
-                name: "Laravel",
-                icon: LaravelIcon,
-                description: "",
-            },
-            {
-                name: "NodeJs",
-                icon: NodeIcon,
-                description: "",
-            }
-        ]
-    },
     timeline: [
         {
-            icon: Academy,
             currently: true,
-            title: "Software Engineer at FANG",
-            subtitle: "2018-Currently",
-            description: "Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages.",
+            title: "아이엘포유",
+            subtitle: "2023 - 현재",
+            description: "SI",
         },
         {
-            icon: Academy,
-            title: "Freelancer",
-            subtitle: "Released on December 7th, 2021",
-            description: "All of the pages and components are first designed in Figma and we keep a parity between the two versions even as we update the project.",
+            title: "리테일앤인사이트",
+            subtitle: "2022 - 2023",
+            description: "중소 마트를 위한 POS/ERP/APP/KIOSK 통합 플랫폼(Tomato) 개발/개선",
         },
         {
-            icon: Academy,
-            title: "2013 - Dhaka University ",
-            subtitle: "2013 - 2018",
-            description: "Studied \"BSC in Computer Science and Engineering\" in Dhaka University.",
+            title: "직무 전환을 위한 개발 공부",
+            subtitle: "2021 - 2022",
+            description: "멀티캠퍼스 [K-Digital Training] 지능형 웹서비스 풀스택 과정 수료",
         },
         {
-            icon: Home,
-            title: "Born in 1996, July 27",
-            subtitle: "Dhaka Bangladesh",
-            description: "I couldn't remember any productive work in that time. But",
+            title: "경희대학교 (kyung hee university) 입학/졸업",
+            subtitle: "2012 - 2020",
+            description: "회계세무학과(Accounting & Taxation) 전공",
+        },
+        {
+            title: "출생",
+            subtitle: "1993.2.1 대한민국, 서울",
+            description: "",
         }
     ],
 };
