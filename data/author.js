@@ -41,7 +41,7 @@ const author = {
             description: "회계세무학과(Accounting & Taxation) 전공",
         },
         {
-            title: "출생",
+            title: "이민혁 대한민국 출생",
             subtitle: "1993.2.1 대한민국, 서울",
             description: "",
         }
