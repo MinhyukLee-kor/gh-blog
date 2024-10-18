@@ -19,4 +19,8 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+::selection {
+  background-color: yellow;
+}
+</style>
