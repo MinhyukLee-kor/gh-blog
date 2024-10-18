@@ -1,7 +1,7 @@
 <template>
   <div class="md:fixed">
     <div class="md:block flex justify-center items-center">
-      <img src="../public/test.jpg"
+      <img src="../public/author.jpg"
            loading="lazy"
            alt="me"
            class="shadow-xl md:h-60 md:w-60 h-40 w-40 rounded-full" />

@@ -4,7 +4,6 @@ import LaravelIcon from "assets/devicon/laravel.svg?component";
 // Frontend Expertise
 
 const author = {
-    author_image: "/author.png",
     name: "Minhyuk Lee",
     position: "Web Developer",
     email: "kazesky93@gmail.com",
@@ -23,12 +22,12 @@ const author = {
             currently: true,
             title: "아이엘포유",
             subtitle: "2023 - 현재",
-            description: "SI",
+            description: "내부 BMS 시스템 개선, 신규 BMS 시스템 개발, 타 시스템 유지/보수",
         },
         {
             title: "리테일앤인사이트",
             subtitle: "2022 - 2023",
-            description: "중소 마트를 위한 POS/ERP/APP/KIOSK 통합 플랫폼(Tomato) 개발/개선",
+            description: "ERP(WEB)/APP 개발,개선 - 중소 마트를 위한 POS/ERP/APP/KIOSK 통합 플랫폼(Tomato)",
         },
         {
             title: "직무 전환을 위한 개발 공부",
@@ -41,7 +40,7 @@ const author = {
             description: "회계세무학과(Accounting & Taxation) 전공",
         },
         {
-            title: "이민혁 대한민국 출생",
+            title: "출생",
             subtitle: "1993.2.1 대한민국, 서울",
             description: "",
         }
