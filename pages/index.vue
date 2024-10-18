@@ -1,15 +1,38 @@
 <template>
-  <div>
-    <h2>Home</h2>
+  <div class="dark:bg-gray-900 mt-6">
+    <div class="max-w-screen-lg md:flex mx-auto dark:bg-gray-900">
+      <div class="md:w-1/3 p-2 md:flex md:justify-center">
+        <AuthorCard />
+      </div>
+      <div class="md:w-2/3 px-8">
+        <AuthorIntro></AuthorIntro>
+        <Expertise></Expertise>
+        <TimeLine></TimeLine>
+      </div>
+    </div>
   </div>
 </template>
 
-<style scoped>
-h2 {
-  color: #4d4d4d;
-}
+<script setup>
+// import siteMetaInfo from "@/data/sitemetainfo";
 
-p {
-  font-size: 1.2em;
-}
-</style>
+// useSeoMeta({
+//   title: siteMetaInfo.title,
+//   meta: [
+//     { charset: "utf-8" },
+//     { name: "viewport", content: "width=device-width, initial-scale=1" },
+//     {
+//       hid: "description",
+//       name: "description",
+//       content: siteMetaInfo.description,
+//     },
+//   ],
+//   link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+// });
+import AuthorCard from "@/components/AuthorCard.vue";
+import AuthorIntro from "@/components/AuthorIntro.vue";
+import Expertise from "@/components/Expertise.vue";
+import TimeLine from "@/components/TimeLine.vue";
+</script>
+
+<style></style>
