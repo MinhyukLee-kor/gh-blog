@@ -2,9 +2,9 @@
   <div class="opacity-100 mt-10">
     <h2
       class="mt-6 text-4xl text-gray-700 font-bold capitalize dark:text-blue-200"
-    > Career </h2>
+    > Project </h2>
     <ol class="ml-3 mt-10 relative border-l border-gray-200 dark:border-gray-700">
-      <li v-for="time in timeline" class="mb-10 ml-6">
+      <li v-for="time in timeline" class="mb-2 ml-6">
         <span
           class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
         >
@@ -32,7 +32,7 @@
 <script setup>
 import author from "@/data/author.js";
 
-const timeline = author.timeline;
+const timeline = author.timeline2;
 </script>
 
 <style></style>

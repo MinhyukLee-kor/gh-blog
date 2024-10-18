@@ -5,7 +5,7 @@
     > About Me
     </h2>
     <div class="mt-8 mb-4 dark:bg-gray-800 font-bold dark:text-blue-200 text-justify">
-      <span>배움을 멈추지 않으며, 창의성과 분석력을 바탕으로 이유있는 코드를 작성하는 개발자</span>
+      어쩌구 저쩌구 어쩌구 저쩌구
     </div>
   </div>
 </template>

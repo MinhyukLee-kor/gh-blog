@@ -6,7 +6,7 @@
           class="text-sm text-gray-500 transition hover:text-gray-600"
           target="_blank"
           rel="noopener noreferrer"
-          :href="author.socials.github"
+          :href="`https://github.com/${author.github}`"
         ><span class="sr-only">github</span>
           <img src="../assets/icons/github_new.svg" alt="github" class="w-8 h-8 text-black" />
         </a>
@@ -22,17 +22,9 @@
           class="text-sm text-gray-500 transition hover:text-gray-600"
           target="_blank"
           rel="noopener noreferrer"
-          :href="author.socials.facebook"
-        ><span class="sr-only">github</span>
-          <img src="../assets/icons/facebook.svg" alt="github" class="w-8 h-8 text-black" />
-        </a>
-        <a
-          class="text-sm text-gray-500 transition hover:text-gray-600"
-          target="_blank"
-          rel="noopener noreferrer"
-          :href="author.socials.youtube"
-        ><span class="sr-only">github</span>
-          <img src="../assets/icons/youtube.svg" alt="github" class="w-8 h-8 text-black" />
+          :href="`https://instagram.com/${author.socials.instagram}`"
+        ><span class="sr-only">instagram</span>
+          <img src="../assets/icons/instagram.svg" alt="github" class="w-8 h-8 text-black" />
         </a>
       </div>
     </div>
