@@ -1,10 +1,10 @@
 <template>
   <div class="opacity-100 mt-10">
-    <h2
+    <button
       class="mt-6 text-4xl text-gray-700 font-bold capitalize dark:text-blue-200"
       @click="requestPassword"
     >
-      <span class="text-yellow-400">{{isOpen ? "▼ ":"▶ "}}</span>Project</h2>
+      <span class="text-yellow-400">{{isOpen ? "▼ ":"▶ "}}</span>Project</button>
     <!-- 비밀번호 입력 화면 -->
     <div v-if="showPasswordInput" class="mt-4">
       <input
@@ -13,7 +13,7 @@
         placeholder="비밀번호 입력"
         class="p-2 border-4 border-yellow-400 rounded-md focus:outline-none"
       />
-      <button @click="verifyPassword" class="ml-2 p-2 bg-yellow-400 text-white rounded-md">
+      <button @click="verifyPassword" class="ml-2 p-2 bg-yellow-400 text-white rounded-md focus:outline-red-500">
         확인
       </button>
       <p v-if="errorMessage" class="text-red-500 mt-2">{{ errorMessage }}</p>
@@ -90,7 +90,7 @@ const verifyPassword = () => {
 
 <style>
 /* 슬라이드 애니메이션 정의 */
-.slide-enter-active, .slide-leave-active {
+.slide-enter-active {
   transition: all 1s ease;
 }
 
