@@ -1,6 +1,6 @@
 ---
 title: "2"
-date: "2023-10-14"
+date: "2023-10-15"
 description: "2번 게시글"
 tags: ["Nuxt.js", "블로그"]
 ---

@@ -6,7 +6,7 @@
     <ol class="ml-3 mt-10 relative border-l border-gray-200 dark:border-gray-700">
       <li v-for="time in timeline" class="mb-10 ml-6">
         <span
-          class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-blue-200 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+          class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-yellow-400 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
         >
         </span>
         <h3

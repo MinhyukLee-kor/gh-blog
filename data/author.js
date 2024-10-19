@@ -44,29 +44,46 @@ const author = {
   timeline2: [
     {
       currently: true,
-      title: "아이엘포유",
+      title: "[아이엘포유]",
       subtitle: "2023 - 현재",
       description: "내부 BMS 시스템 개선, 신규 BMS 시스템 개발, 타 시스템 유지/보수",
+      skill:"java, jsp, php, Vue.js, postgresSql, mariadb"
     },
     {
       title: "[새솔다이아몬드공업] ERP 대시보드 컨설팅",
       subtitle: "2024.08 - 2024.09",
       description: "경영진 요구사항 분석 및 화면 레이아웃 설계 수행",
+      skill:""
     },
     {
       title: "[히타치] epas v2.0 유지/보수",
       subtitle: "2024.08 - 2024.10",
       description: "고객 요구사항 및 오류 개선",
+      skill:"java, jsp, oracle"
     },
     {
       title: "[삼성 바이오에피스] myNow 3.0 컨설팅",
       subtitle: "2024.03 - 2024.04",
       description: "클라이언트 요구사항 분석 및 화면 설계 수행",
+      skill:""
     },
     {
       title: "[리테일앤인사이트] Tomato UFR 프로젝트",
-      subtitle: "2024.02 - 2024.02",
+      subtitle: "2024.02 - 2024.03",
       description: "ERP 시스템 고도화/개선",
+      skill:"java, jsp, mariadb"
+    },
+    {
+      title: "[리테일앤인사이트] 네이버 쇼핑(장보기) 연동",
+      subtitle: "2023.06 - 2024.12",
+      description: "상품 연동 REST API 개발, ERP 연동 화면 개발",
+      skill:"java, jsp, mariadb"
+    },
+    {
+      title: "[리테일앤인사이트] Tomato 플랫폼 유지/보수/개발",
+      subtitle: "2022.07 - 2023.08",
+      description: "ERP(WEB), 관리자APP(WEB APP), Android HT(native-Java) 개선,고도화",
+      skill:"java, jsp, mariadb"
     },
   ],
 };

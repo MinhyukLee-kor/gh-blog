@@ -146,7 +146,7 @@
             IntelliJ
           </div>
         </td>
-        <td class="border border-gray-400 p-2 dark:text-blue-200">상</td>
+        <td class="border border-gray-400 p-2 dark:text-blue-200">-</td>
       </tr>
       <tr>
         <td class="border border-gray-400 p-2 dark:text-blue-200"></td>
@@ -156,7 +156,7 @@
             DBeaver
           </div>
         </td>
-        <td class="border border-gray-400 p-2 dark:text-blue-200">상</td>
+        <td class="border border-gray-400 p-2 dark:text-blue-200">-</td>
       </tr>
       </tbody>
     </table>
