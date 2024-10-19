@@ -2,7 +2,7 @@
 title: "1"
 publishDate: 2024.10.19
 description: "1번 게시글"
-heroImage: "/assets/blog/img2.jpg"
+heroImage: "assets/blog/img1.jpg"
 tags: ["Nuxt.js", "블로그"]
 ---
 
