@@ -4,8 +4,14 @@ export default {
   modules: [
     '@nuxt/content',
     "@nuxtjs/tailwindcss",
-    "@nuxt/image"
+    "@nuxt/image",
+    "@nuxtjs/color-mode"
   ],
+  colorMode: {
+    preference: 'system', // 기본 모드 설정 (시스템 설정에 따름)
+    fallback: 'light',    // 시스템 설정을 사용할 수 없을 경우 기본 모드 (light)
+    classSuffix: ''       // 'dark-mode' 대신 'dark' 클래스를 추가
+  },
   css: ["@/assets/css/main.css"],
   // Router 설정: 서브 디렉토리로 배포될 때 올바른 기본 경로를 설정합니다.
   router: {
@@ -18,7 +24,8 @@ export default {
   },
 
   // Build 설정 최적화: 경로 중복을 피하기 위해 publicPath를 제거합니다.
-  build: {},
+  build: {
+  },
 
   // Head 설정: 메타 정보와 favicon 설정
   head: {
@@ -29,7 +36,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'My Nuxt Blog' },
+      { hid: 'description', name: 'description', content: '민혁꾸 개발놀이터' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [

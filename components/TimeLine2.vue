@@ -1,10 +1,10 @@
 <template>
   <div class="opacity-100 mt-10">
     <button
-      class="mt-6 text-4xl text-gray-700 font-bold capitalize dark:text-blue-200"
+      class="mt-6 text-4xl text-gray-700 font-bold capitalize dark:text-white"
       @click="requestPassword"
     >
-      <span class="text-yellow-400">{{isOpen ? "▼ ":"▶ "}}</span>Project</button>
+      <span class="text-yellow-400 dark:text-white">{{isOpen ? "▼ ":"▶ "}}</span>Project</button>
     <!-- 비밀번호 입력 화면 -->
     <div v-if="showPasswordInput" class="mt-4">
       <input
@@ -24,14 +24,14 @@
       >
         <li v-for="time in timeline" class="mb-2 ml-6">
           <span
-            class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-yellow-400 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900"
+            class="flex absolute -left-3 justify-center items-center w-6 h-6 bg-yellow-400 rounded-full ring-8 ring-white dark:ring-gray-900 dark:bg-gray-800"
           >
           </span>
           <h3
             class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
           >
             {{ time.title }}
-            <span v-if="time.currently" class="bg-yellow-300 text-red-500 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ml-3">
+            <span v-if="time.currently" class="bg-yellow-300 text-red-500 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-gray-500 dark:text-white ml-3">
               Currently
             </span>
           </h3>

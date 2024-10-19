@@ -1,6 +1,6 @@
 <template>
-  <div class="dark:bg-gray-900 mt-6">
-    <div class="max-w-screen-lg mx-auto dark:bg-gray-900">
+  <div class="dark:bg-gray-800 mt-6">
+    <div class="max-w-screen-lg mx-auto dark:bg-gray-800">
       <div class="px-8">
         <AuthorIntro></AuthorIntro>
         <div class="border-b border-yellow-400"></div>

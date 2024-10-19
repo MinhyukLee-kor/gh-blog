@@ -1,6 +1,6 @@
 <template>
   <!-- Section 1 -->
-  <section class="w-full pb-12 antialiased bg-white">
+  <section class="w-full pb-12 antialiased bg-white dark:bg-gray-800">
     <div class="mx-auto max-w-8xl">
       <TheHeader />
       <Nuxt />
@@ -21,6 +21,6 @@ export default {
 
 <style>
 ::selection {
-  background-color: yellow;
+  background-color: #FACC15;
 }
 </style>

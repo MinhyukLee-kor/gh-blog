@@ -1,7 +1,8 @@
 ---
 title: "2"
-date: "2023-10-15"
+publishDate: 2024.10.19
 description: "2번 게시글"
+heroImage: "/assets/blog/img3.jpg"
 tags: ["Nuxt.js", "블로그"]
 ---
 

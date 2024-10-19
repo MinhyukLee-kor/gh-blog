@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxt/content": "^1.0.0",
     "@nuxt/image": "^1.8.1",
+    "@nuxtjs/color-mode": "^2.1.1",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.15",

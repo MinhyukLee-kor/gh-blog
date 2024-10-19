@@ -28,7 +28,14 @@
       </div>
 
       <!-- 오른쪽: 공백 섹션 -->
-      <div class="flex-1"></div>
+      <div class="flex-1 flex justify-center">
+        <button aria-label="Color Mode" class="inline-block w-8 h-8" @click="toggleDarkMode">
+          <ColorScheme placeholder="...">
+            <img v-if="this.$colorMode.value === 'dark'" src="/dark.svg" alt="darkMode" class="w-10 h-10">
+            <img v-else src="/light.svg" alt="lightMode" class="w-10 h-10">
+          </ColorScheme>
+        </button>
+      </div>
     </div>
   </nav>
 
@@ -44,6 +51,11 @@ export default {
       navLinks: menu,
     };
   },
+  methods: {
+    toggleDarkMode() {
+      this.$colorMode.preference = this.$colorMode.value === 'dark' ? 'light' : 'dark';
+    }
+  }
 };
 </script>
 
