@@ -1,7 +1,7 @@
 <template>
   <nav class="mx-auto sticky top-0 z-50">
     <div
-      class="bg-yellow-400 text-white flex items-center justify-between px-10 md:py-4 py-2 overflow-hidden font-2xl sm:px-4 md:overflow-visible md:px-2"
+      class="bg-yellow-400 text-white flex flex-col md:flex-row items-center justify-between px-10 md:py-4 py-2 overflow-hidden font-2xl sm:px-4 md:overflow-visible md:px-2"
     >
       <!-- 왼쪽: 제목 섹션 -->
       <div class="flex-1 flex justify-start">
@@ -9,7 +9,7 @@
           to="/"
           class="text-white font-bold text-2xl no-underline"
         >
-          <span class="text-white">민혀꾸의 개발 놀이터</span>
+          <span class="text-white">민혀꾸 개발놀이터</span>
         </NuxtLink>
       </div>
 
