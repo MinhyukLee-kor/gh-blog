@@ -2,7 +2,7 @@
   <div>
     <h2>Blog Posts</h2>
     <div class="postCard" v-for="post in posts" :key="post.slug">
-      <nuxt-link :to="`/posts/${post.slug}`">
+      <nuxt-link :to="`/blog/${post.slug}`">
         <h3>{{ post.title }}</h3>
       </nuxt-link>
       <p>{{ post.description }}</p>
@@ -13,7 +13,7 @@
 <script>
 export default {
   async asyncData({$content}) {
-    const posts = await $content('posts').fetch();
+    const posts = await $content('blog').fetch();
     return {posts};
   }
 }

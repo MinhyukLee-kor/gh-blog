@@ -10,8 +10,8 @@
             class="mt-6 text-4xl text-gray-700 font-bold capitalize dark:text-blue-200"
           > Hi, I'm Minhyuk
           </h2>
-          <div class="mt-8 mb-4 dark:bg-gray-800 font-bold text-xl dark:text-blue-200 text-justify">
-            <span>배움을 멈추지 않으며, 창의성과 분석력을 바탕으로 이유있는 코드를 작성하는 개발자</span>
+          <div class="mt-8 mb-4 text-gray-500 dark:bg-gray-800 font-bold text-xl dark:text-blue-200 text-justify">
+            <span>3년차 웹 개발자</span>
           </div>
           <div class="border-b border-yellow-400"></div>
           <div class="mt-10">
