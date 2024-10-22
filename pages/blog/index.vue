@@ -70,10 +70,10 @@
         <span class="text-gray-900 dark:text-white font-bold">Page {{ currentPage }} of {{ totalPages }}</span>
       </div>
       <div class="flex space-x-4">
-        <button @click="prevPage" :disabled="currentPage === 1" class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-md font-bold hover:bg-yellow-500">
+        <button @click="prevPage" class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-md font-bold hover:bg-yellow-500">
           이전
         </button>
-        <button @click="nextPage" :disabled="currentPage === totalPages" class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-md font-bold hover:bg-yellow-500">
+        <button @click="nextPage" class="px-4 py-2 bg-yellow-400 text-gray-900 rounded-md font-bold hover:bg-yellow-500">
           다음
         </button>
       </div>
@@ -92,7 +92,7 @@ export default {
       sortOrder: 'desc', // 정렬 순서
       allTags: [], // 태그 목록
       currentPage: 1, // 현재 페이지 번호
-      postsPerPage: 5, // 페이지당 게시글 수
+      postsPerPage: 3, // 페이지당 게시글 수
     };
   },
 
