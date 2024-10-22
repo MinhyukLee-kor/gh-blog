@@ -20,7 +20,12 @@ export default {
 
   // Generate 설정: 동적 라우트 처리 문제를 방지하기 위한 fallback 설정
   generate: {
-    fallback: true // 404를 처리하고 SPA 라우팅을 지원
+    fallback: true, // 404를 처리하고 SPA 라우팅을 지원
+    routes: async () => {
+      const { $content } = require('@nuxt/content')
+      const posts = await $content('blog').fetch()
+      return posts.map(post => `/blog/${post.slug}`)
+    }
   },
 
   // Build 설정 최적화: 경로 중복을 피하기 위해 publicPath를 제거합니다.
