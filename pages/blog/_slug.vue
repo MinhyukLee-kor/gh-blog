@@ -4,22 +4,32 @@
       <BackButton />
       <article class="py-16 px-6 sm:px-8">
         <header class="flex flex-col items-center">
-          <p class="text-gray-700 font-semibold tracking-wide">
-            {{ page.publishDate }}
+          <p class="text-gray-700 font-semibold tracking-wide dark:text-white">
+            {{ formatDate(page.date) }}
           </p>
           <h1
-            class="mt-2 text-3xl font-extrabold tracking-tight text-slate-900 dark:text-slate-100 sm:text-4xl"
+            class="mt-2 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-slate-100 sm:text-4xl"
           >
             {{ page.title }}
           </h1>
-          <a
-            class="mt-2 text-gray-700 font-semibold tracking-wide hover:underline"
-            :href="page.authorURL"
-          >{{ page.author }}</a>
-          <hr class="mt-8 border-t-2 w-20 mx-auto">
+
+          <!-- 작성자 이름 표시 (링크 여부 조건) -->
+          <template v-if="page.authorURL">
+            <a
+              class="mt-2 text-gray-900 font-semibold tracking-wide hover:underline dark:text-white"
+              :href="page.authorURL"
+            >{{ page.author }}</a>
+          </template>
+          <template v-else>
+            <p class="mt-2 text-gray-900 font-semibold tracking-wide dark:text-white">
+              {{ page.author }}
+            </p>
+          </template>
+
+          <hr class="mt-8 border-t-2 w-20 mx-auto" />
           <img
             class="object-cover"
-            :src="page.heroImage"
+            :src="page.image"
             :alt="page.alt"
             loading="lazy"
           />
@@ -28,7 +38,6 @@
           class="mt-8 prose prose-slate mx-auto lg:prose-lg dark:prose-invert prose-img:rounded-2xl prose-img:shadow-md"
         >
           <nuxt-content :document="page" />
-<!--          <PageToc />-->
         </div>
       </article>
       <BlogFooter />
@@ -42,12 +51,16 @@ import BackButton from "@/components/BackButton.vue";
 import BlogFooter from "@/components/BlogFooter.vue"
 
 export default defineComponent({
-  components: {BackButton, BlogFooter},
+  components: { BackButton, BlogFooter },
   async asyncData({ $content, params }) {
     const page = await $content('blog', params.slug).fetch();
     return { page };
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      return new Date(date).toLocaleDateString('ko-KR', options);
+    },
   }
-})
-
+});
 </script>
-
