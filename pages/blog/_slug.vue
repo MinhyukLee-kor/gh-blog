@@ -28,7 +28,7 @@
 
           <hr class="mt-8 border-t-2 w-20 mx-auto" />
           <img
-            class="object-cover"
+            class="object-cover sm:max-w-md md:max-w-lg lg:max-w-3xl mx-auto"
             :src="page.image"
             :alt="page.alt"
             loading="lazy"

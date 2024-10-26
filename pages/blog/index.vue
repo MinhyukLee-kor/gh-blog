@@ -78,6 +78,22 @@
         </button>
       </div>
     </div>
+
+    <!-- 페이지 번호 리스트 -->
+    <div class="flex justify-center items-center mt-4 space-x-2">
+      <button
+        v-for="page in totalPages"
+        :key="page"
+        @click="goToSpecificPage(page)"
+        :class="{
+          'bg-yellow-500 text-white': currentPage === page,
+          'bg-yellow-400 text-gray-900': currentPage !== page
+        }"
+        class="px-3 py-2 rounded-md font-bold hover:bg-yellow-500"
+      >
+        {{ page }}
+      </button>
+    </div>
   </div>
 </template>
 
@@ -97,31 +113,28 @@ export default {
   },
 
   async asyncData({ $content }) {
-    // 'blog' 폴더의 모든 게시글 가져오기, 날짜를 기준으로 최신순으로 정렬
     const posts = await $content('blog')
       .sortBy('date', 'desc')
       .where({ draft: { $ne: true } })
       .fetch();
 
-    // 모든 태그 목록 추출 (중복 제거)
     const allTags = [...new Set(posts.flatMap(post => post.tags))];
 
     return { posts, allTags };
   },
 
   mounted() {
-    this.filterPosts(); // 처음에 모든 게시글 표시
+    this.filterPosts();
   },
 
   computed: {
     totalPages() {
       return Math.ceil(this.filteredPosts.length / this.postsPerPage);
-    }
+    },
   },
 
   methods: {
     filterPosts() {
-      // 선택된 태그가 있을 경우 해당 태그들이 모두 포함된 게시글만 필터링
       if (this.selectedTags.length) {
         this.filteredPosts = this.posts.filter(post =>
           this.selectedTags.every(tag => post.tags.includes(tag))
@@ -129,22 +142,20 @@ export default {
       } else {
         this.filteredPosts = this.posts;
       }
-      this.sortPosts(); // 필터링 후 정렬도 다시 수행
-      this.currentPage = 1; // 필터링 후 첫 페이지로 이동
+      this.sortPosts();
+      this.currentPage = 1;
     },
 
     sortPosts() {
-      // 최신순 또는 오래된 순 정렬
       this.filteredPosts.sort((a, b) => {
         const dateA = new Date(a.date);
         const dateB = new Date(b.date);
         return this.sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
       });
-      this.paginatePosts(); // 정렬 후 페이징 다시 수행
+      this.paginatePosts();
     },
 
     paginatePosts() {
-      // 필터링 및 정렬된 게시글을 페이징 처리
       const start = (this.currentPage - 1) * this.postsPerPage;
       const end = start + this.postsPerPage;
       this.paginatedPosts = this.filteredPosts.slice(start, end);
@@ -164,33 +175,38 @@ export default {
       }
     },
 
+    goToSpecificPage(page) {
+      if (page >= 1 && page <= this.totalPages) {
+        this.currentPage = page;
+        this.paginatePosts();
+      }
+    },
+
     formatDate(date) {
       const options = { year: 'numeric', month: 'long', day: 'numeric' };
       return new Date(date).toLocaleDateString('ko-KR', options);
     },
 
     toggleTag(tag) {
-      // 태그가 선택된 상태라면 제거, 아니면 추가
       if (this.selectedTags.includes(tag)) {
         this.selectedTags = this.selectedTags.filter(t => t !== tag);
       } else {
         this.selectedTags.push(tag);
       }
-      this.filterPosts(); // 태그 선택 시 필터링 다시 수행
+      this.filterPosts();
     },
 
     clearTags() {
-      this.selectedTags = []; // 선택된 태그 초기화
-      this.filterPosts(); // 태그 초기화 후 필터링 다시 수행
-    }
-  }
+      this.selectedTags = [];
+      this.filterPosts();
+    },
+  },
 };
 </script>
 
 <style scoped>
-/* 최소 높이를 설정하여 페이지 변동 방지 */
 .post-list {
-  min-height: 70vh; /* 원하는 최소 높이로 설정 (화면 높이의 70%) */
+  min-height: 70vh;
 }
 
 h1 {
@@ -198,10 +214,9 @@ h1 {
   text-align: center;
 }
 
-/* 이미지가 article 높이에 맞게 꽉 차도록 설정 */
 article img {
-  object-fit: cover; /* 이미지가 부모 요소에 맞게 채워지도록 */
-  height: 100%; /* 이미지 높이를 article에 맞춤 */
+  object-fit: cover;
+  height: 100%;
 }
 
 article {
@@ -225,7 +240,6 @@ button {
   cursor: pointer;
 }
 
-/* 태그 버튼 크기가 부모 div에 맞춰지지 않도록 수정 */
 span {
   flex-grow: 0;
 }
