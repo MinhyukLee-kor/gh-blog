@@ -7,6 +7,13 @@ export default {
     "@nuxt/image",
     "@nuxtjs/color-mode"
   ],
+  content: {
+    markdown: {
+      prism: {
+        theme: '~/assets/css/prism.css' // 원하는 Prism.js 테마를 설정
+      }
+    }
+  },
   colorMode: {
     preference: 'system', // 기본 모드 설정 (시스템 설정에 따름)
     fallback: 'light',    // 시스템 설정을 사용할 수 없을 경우 기본 모드 (light)
