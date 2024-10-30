@@ -10,7 +10,7 @@ image: "https://res.cloudinary.com/dm1p7z6wq/image/upload/v1729931458/test_lzfqt
 alt: "이미지에 대한 설명" # 대표 이미지의 대체 텍스트 (SEO 및 접근성)
 keywords: # 게시글 관련 키워드 (SEO를 위한 키워드)
   - "Test"
-category: "개발" # 게시글이 속한 카테고리
+category: "테스트" # 게시글이 속한 카테고리
 draft: false # 게시글이 초안인지 여부
 ---
 
