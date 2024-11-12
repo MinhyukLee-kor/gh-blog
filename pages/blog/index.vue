@@ -68,7 +68,7 @@
           <hr class="py-2 mt-8 border-t-2 w-20 mx-auto" />
           <article class="flex flex-col sm:flex-row bg-white transition hover:shadow-xl dark:bg-gray-800 dark:shadow-gray-800/25">
             <!-- 이미지 섹션 (이미지를 article 높이에 맞게 설정) -->
-            <div class="w-full sm:w-56 h-64 sm:h-auto">
+            <div class="w-full sm:w-56 h-24 sm:h-auto">
               <img :src="post.image" :alt="post.alt" class="h-full w-full object-cover" />
             </div>
 
